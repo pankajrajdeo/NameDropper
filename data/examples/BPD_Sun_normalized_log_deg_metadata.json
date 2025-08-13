@@ -1,0 +1,300 @@
+{
+  "dataset": {
+    "**Dataset Metadata**": {
+      "**Dataset Name**": "BPD_Sun_normalized_log_deg.h5ad",
+      "**Description**": "Bronchopulmonary dysplasia (BPD) is a chronic lung disease characterized by alveolar dysplasia in newborns that are typically born prematurely. In this study, single-nucleus RNA-Sequencing was performed on 13 BPD cases and 11 controls (total n=24) who died from complications associated with BPD (4 months to 3 years of age).",
+      "**Species**": "Homo sapiens",
+      "**Research Team**": "LungMAP (Sun lab)",
+      "**Publication**": null,
+      "**Source**": null
+    },
+    "**Indexes and Annotations**": {
+      "**Donor Index** (Unique donor identifier)": "donor_id",
+      "**Cell Type Index** (Cell types in dataset)": {
+        "cell type": [
+          "AT2",
+          "AT1",
+          "AF1",
+          "RAS",
+          "Ciliated",
+          "AM",
+          "CAP1",
+          "Secretory",
+          "CAP2",
+          "ASMC",
+          "PC",
+          "VEC",
+          "Proliferating AT2",
+          "pDC",
+          "Mesothelial",
+          "BCell",
+          "IM",
+          "TCell",
+          "LEC",
+          "Deuterosomal",
+          "AF2",
+          "NK",
+          "AEC",
+          "SCMF",
+          "cDC",
+          "PNEC",
+          "Basal",
+          "MON",
+          "VSMC",
+          "Plasma",
+          "Mast"
+        ]
+      },
+      "**Covariate Index** (Covariates and annotations, e.g., diseases)": {
+        "disease": [
+          "control",
+          "healed BPD",
+          "active evolving BPD",
+          "chronic BPD"
+        ]
+      },
+      "**Age Index** (Age-related annotations)": {
+        "age": [
+          "6 months",
+          "39 months",
+          "7 months",
+          "20 months",
+          "4 months",
+          "36 months",
+          "19 months",
+          "14 months",
+          "15 months",
+          "46 months",
+          "8 months",
+          "5 months",
+          "11 months",
+          "21 months",
+          "18 months",
+          "44 months",
+          "37 months",
+          "13 months",
+          "12 months"
+        ]
+      },
+      "**Sex Index** (Sex-related annotations)": {
+        "sex": [
+          "male",
+          "female"
+        ]
+      },
+      "**Study Index** (Study names associated with dataset)": {},
+      "**Suspension Index** (Suspension type annotations)": {
+        "suspension_type": [
+          "cell"
+        ]
+      },
+      "**Assay Index** (Assay methods used)": {},
+      "**Tissue Index** (Tissue types represented)": {},
+      "**Ethnicity Index** (Self-reported ethnicity)": {
+        "race": [
+          "White",
+          "Hispanic",
+          "Black"
+        ]
+      },
+      "**Sampling Index** (Sampling methods)": {}
+    },
+    "**Dataset-Specific Fields**": {
+      "**Disease Stats**": "disease",
+      "**Restrict Index**": [],
+      "**Display Index**": [
+        "disease",
+        "age"
+      ]
+    },
+    "**Lineage Levels**": {
+      "level_1": "lineage_level1",
+      "level_2": "lineage_level2",
+      "level_3": "cell type"
+    },
+    "**Differential Expression** (Disease-Study-CellType mappings)": [
+      {
+        "disease": "active evolving BPD",
+        "study": "tissue",
+        "cell_types": [
+          "AEC",
+          "AF1",
+          "AF2",
+          "AM",
+          "ASMC",
+          "AT1",
+          "AT2",
+          "Basal",
+          "BCell",
+          "CAP1",
+          "CAP2",
+          "cDC",
+          "Ciliated",
+          "Deuterosomal",
+          "IM",
+          "LEC",
+          "Mast",
+          "Mesothelial",
+          "MON",
+          "NK",
+          "PC",
+          "Proliferating AT2",
+          "RAS",
+          "SCMF",
+          "Secretory",
+          "TCell",
+          "VEC",
+          "VSMC"
+        ]
+      },
+      {
+        "disease": "chronic BPD",
+        "study": "tissue",
+        "cell_types": [
+          "AEC",
+          "AF1",
+          "AF2",
+          "AM",
+          "ASMC",
+          "AT1",
+          "AT2",
+          "Basal",
+          "BCell",
+          "CAP1",
+          "CAP2",
+          "cDC",
+          "Ciliated",
+          "IM",
+          "LEC",
+          "Mesothelial",
+          "MON",
+          "NK",
+          "PC",
+          "Plasma",
+          "PNEC",
+          "Proliferating AT2",
+          "RAS",
+          "SCMF",
+          "Secretory",
+          "TCell",
+          "VEC",
+          "VSMC"
+        ]
+      },
+      {
+        "disease": "healed BPD",
+        "study": "tissue",
+        "cell_types": [
+          "AEC",
+          "AF1",
+          "AF2",
+          "AM",
+          "ASMC",
+          "AT1",
+          "AT2",
+          "Basal",
+          "BCell",
+          "CAP1",
+          "CAP2",
+          "cDC",
+          "Ciliated",
+          "Deuterosomal",
+          "IM",
+          "LEC",
+          "Mesothelial",
+          "MON",
+          "NK",
+          "PC",
+          "PNEC",
+          "Proliferating AT2",
+          "RAS",
+          "SCMF",
+          "Secretory",
+          "TCell",
+          "VEC",
+          "VSMC"
+        ]
+      }
+    ],
+    "**Directory Path** (File location of the dataset)": "/data/aronow/pankaj/FigChat/datasets/BPD_Sun_normalized_log_deg",
+    "**AnnData Structure**": {
+      "shape": [
+        271381,
+        36601
+      ],
+      "X_dtype": "float64",
+      "obs_fields": [
+        "sample_id",
+        "donor_id",
+        "disease",
+        "species",
+        "age",
+        "sex",
+        "pna",
+        "ga",
+        "pma",
+        "perc_pma",
+        "race",
+        "rac",
+        "wit",
+        "cit",
+        "tissue_type",
+        "tissue_ontology_term_id",
+        "suspension_type",
+        "assay_ontology_term_id",
+        "organism_ontology_term_id",
+        "sex_ontology_term_id",
+        "disease_ontology_term_id",
+        "development_stage_ontology_term_id",
+        "self_reported_ethnicity_ontology_term_id",
+        "n_genes_by_counts",
+        "total_counts",
+        "total_counts_mt",
+        "pct_counts_mt",
+        "n_genes",
+        "n_counts",
+        "cell type",
+        "CellRef-level3",
+        "CellRef-score",
+        "cell_type_ontology_term_id",
+        "lineage_level1",
+        "lineage_level2",
+        "celltype_level3_fullname",
+        "disease_mapped",
+        "lineage-disease",
+        "donor-disease",
+        "celltype-disease"
+      ],
+      "var_fields": [
+        "mt",
+        "n_cells_by_counts",
+        "mean_counts",
+        "pct_dropout_by_counts",
+        "total_counts"
+      ],
+      "obsm_keys": [
+        "X_refUMAP",
+        "X_umap"
+      ],
+      "uns_keys": [
+        "disease_comparison_summary",
+        "disease_stats",
+        "interaction_data",
+        "marker_stats",
+        "rank_genes_groups"
+      ],
+      "layers_keys": []
+    }
+  },
+  "notes": {
+    "**Notes** (Explanation of fields and structure)": [
+      "1. **Dataset Metadata**: General information about the dataset, including its name, description, species, research team, publication link, and data source.",
+      "2. **Indexes and Annotations**: Metadata fields that organize and describe aspects of the dataset such as cell types, covariates, age, sex, studies, assays, tissues, and sampling methods.",
+      "3. **Dataset-Specific Fields**: Includes disease statistics, restrict index for filtering, and display index for visualization preferences.",
+      "4. **Lineage Levels**: Defines the lineage annotation levels specific to each dataset.",
+      "5. **Differential Expression**: Information linking diseases, associated studies, and cell types involved in differential expression analysis.",
+      "6. **Directory Path**: The file location where the dataset is stored.",
+      "7. **AnnData Structure**: Structure of the AnnData object for the dataset."
+    ]
+  }
+}

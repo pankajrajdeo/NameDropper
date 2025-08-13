@@ -1,0 +1,129 @@
+# Ontology Configuration for NameDropper
+# This file defines the available ontologies and their properties
+
+ontologies:
+  # Clinical & Disease Domain
+  HPO:
+    name: "Human Phenotype Ontology"
+    description: "Standard vocabulary of phenotypic abnormalities encountered in human disease"
+    domain: "clinical"
+    priority: "high"
+    
+  MONDO:
+    name: "Disease Ontology"
+    description: "Comprehensive ontology of human diseases"
+    domain: "clinical"
+    priority: "high"
+    
+  DOID:
+    name: "Disease Ontology"
+    description: "Comprehensive ontology of human diseases"
+    domain: "clinical"
+    priority: "high"
+    
+  ORDO:
+    name: "Orphanet Rare Disease Ontology"
+    description: "Reference resource for rare diseases"
+    domain: "clinical"
+    priority: "medium"
+    
+  # Cellular & Anatomical Domain
+  CL:
+    name: "Cell Ontology"
+    description: "Standardized nomenclature for cell types"
+    domain: "cellular"
+    priority: "high"
+    
+  UBERON:
+    name: "Anatomy Ontology"
+    description: "Cross-species anatomy ontology"
+    domain: "cellular"
+    priority: "high"
+    
+  FMA:
+    name: "Foundational Model of Anatomy"
+    description: "Comprehensive human anatomy ontology"
+    domain: "cellular"
+    priority: "medium"
+    
+  # Chemical & Molecular Domain
+  CHEBI:
+    name: "Chemical Entities of Biological Interest"
+    description: "Molecular entities and biological role"
+    domain: "chemical"
+    priority: "high"
+    
+  GO:
+    name: "Gene Ontology"
+    description: "Biological processes, molecular functions, cellular components"
+    domain: "chemical"
+    priority: "high"
+    
+  PR:
+    name: "Protein Ontology"
+    description: "Protein entities and their properties"
+    domain: "chemical"
+    priority: "medium"
+    
+  # Experimental & Methodological Domain
+  EFO:
+    name: "Experimental Factor Ontology"
+    description: "Experimental variables and conditions"
+    domain: "experimental"
+    priority: "medium"
+    
+  OBI:
+    name: "Ontology for Biomedical Investigations"
+    description: "Methods, instruments, and protocols"
+    domain: "experimental"
+    priority: "medium"
+    
+  PATO:
+    name: "Phenotype and Trait Ontology"
+    description: "Qualities and attributes"
+    domain: "experimental"
+    priority: "medium"
+
+# Default harmonization strategies
+strategies:
+  clinical:
+    priority: ["exact", "fuzzy", "semantic"]
+    semantic_threshold: 0.7
+    fuzzy_threshold: 0.85
+    
+  cellular:
+    priority: ["exact", "fuzzy", "semantic"]
+    semantic_threshold: 0.8
+    fuzzy_threshold: 0.9
+    
+  chemical:
+    priority: ["exact", "fuzzy", "semantic"]
+    semantic_threshold: 0.75
+    fuzzy_threshold: 0.85
+    
+  experimental:
+    priority: ["exact", "fuzzy", "semantic", "fulltext"]
+    semantic_threshold: 0.6
+    fuzzy_threshold: 0.8
+
+# Field-specific mappings
+field_mappings:
+  cell_type:
+    preferred_ontologies: ["CL", "UBERON"]
+    strategy: "cellular"
+    
+  disease:
+    preferred_ontologies: ["MONDO", "DOID", "HPO", "ORDO"]
+    strategy: "clinical"
+    
+  tissue:
+    preferred_ontologies: ["UBERON", "FMA"]
+    strategy: "cellular"
+    
+  chemical:
+    preferred_ontologies: ["CHEBI", "GO"]
+    strategy: "chemical"
+    
+  phenotype:
+    preferred_ontologies: ["HPO", "PATO"]
+    strategy: "clinical"

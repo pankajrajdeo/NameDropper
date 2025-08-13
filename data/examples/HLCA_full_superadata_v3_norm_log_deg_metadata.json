@@ -1,0 +1,529 @@
+{
+  "dataset": {
+    "**Dataset Metadata**": {
+      "**Dataset Name**": "HLCA_full_superadata_v3_norm_log_deg.h5ad",
+      "**Description**": "Supercell bins of 50 cells per bin on the entire h5ad computed at the donor and cell level, reducing 2,282,447 cells to 50,520 metacells . The integrated Human Lung Cell Atlas (HLCA) represents the first large-scale, integrated single-cell reference atlas of the human lung. It consists of over 2 million cells from the respiratory tract of 486 individuals, and includes 49 different datasets. It is split into the HLCA core, and the extended or full HLCA. The HLCA core includes data of healthy lung tissue from 107 individuals, and includes manual cell type annotations based on consensus across 6 independent experts, as well as demographic, biological and technical metadata. The datasets in the HLCA core were integrated using scANVI. The HLCA core can be used as a reference to map new datasets onto using scArches. The full HLCA includes 35 further datasets that include donors with various lung diseases. These datasets were mapped onto the core with scArches, and include disease annotations as well as cell type annotations transferred from the HLCA core onto the mapped datasets. Note that while the the HLCA includes an integrated, batch-correctd low-dimensional embedding, the gene counts themselves were not batch-corrected.  Detailed information about all metadata in the objects, as well as further HLCA-related information , can be found on the HLCA landing page: https://github.com/LungCellAtlas/HLCA. Raw counts are available in the downloaded .h5ad at adata.raw.X, in the downloaded .rds at seurat_object@assays$RNA@counts, and via CELLxGENE Census.",
+      "**Species**": "Homo sapiens",
+      "**Research Team**": "Human Lung Cell Atlas Initiative",
+      "**Publication**": "https://www.nature.com/articles/s41591-023-02327-2",
+      "**Source**": "https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293"
+    },
+    "**Indexes and Annotations**": {
+      "**Donor Index** (Unique donor identifier)": "donor_id",
+      "**Cell Type Index** (Cell types in dataset)": {
+        "ann_finest_level": [
+          "Monocyte-derived Mph",
+          "Alveolar macrophages",
+          "NK cells",
+          "Alveolar Mph CCL3+",
+          "AT2",
+          "Lymphatic EC mature",
+          "B cells",
+          "CD8 T cells",
+          "CD4 T cells",
+          "DC2",
+          "Mast cells",
+          "Suprabasal",
+          "Smooth muscle",
+          "Classical monocytes",
+          "EC general capillary",
+          "pre-TB secretory",
+          "Multiciliated (non-nasal)",
+          "AT1",
+          "EC venous pulmonary",
+          "EC arterial",
+          "Adventitial fibroblasts",
+          "Alveolar fibroblasts",
+          "Hematopoietic stem cells",
+          "Unknown",
+          "Pericytes",
+          "EC aerocyte capillary",
+          "Myofibroblasts",
+          "Plasma cells",
+          "Basal resting",
+          "Interstitial Mph perivascular",
+          "EC venous systemic",
+          "Lymphatic EC differentiating",
+          "Smooth muscle FAM83D+",
+          "AT2 proliferating",
+          "Non-classical monocytes",
+          "SM activated stress response",
+          "DC1",
+          "SMG mucous",
+          "Ionocyte",
+          "SMG duct",
+          "Neuroendocrine",
+          "Club (non-nasal)",
+          "Goblet (nasal)",
+          "Hillock-like",
+          "Tuft",
+          "Club (nasal)",
+          "Goblet (bronchial)",
+          "Multiciliated (nasal)",
+          "Alveolar Mph proliferating",
+          "SMG serous (bronchial)",
+          "Subpleural fibroblasts",
+          "Lymphatic EC proliferating",
+          "Mesothelium",
+          "AT0",
+          "T cells proliferating",
+          "Deuterosomal",
+          "Migratory DCs",
+          "Plasmacytoid DCs",
+          "Peribronchial fibroblasts",
+          "Alveolar Mph MT-positive",
+          "Goblet (subsegmental)",
+          "SMG serous (nasal)"
+        ]
+      },
+      "**Covariate Index** (Covariates and annotations, e.g., diseases)": {
+        "disease": [
+          "normal",
+          "interstitial lung disease",
+          "pneumonia",
+          "COVID-19",
+          "pulmonary fibrosis",
+          "hypersensitivity pneumonitis",
+          "pulmonary sarcoidosis",
+          "non-specific interstitial pneumonia",
+          "cystic fibrosis",
+          "chronic obstructive pulmonary disease",
+          "squamous cell lung carcinoma",
+          "lung adenocarcinoma",
+          "lung large cell carcinoma",
+          "pleomorphic carcinoma",
+          "lymphangioleiomyomatosis",
+          "chronic rhinitis"
+        ]
+      },
+      "**Age Index** (Age-related annotations)": {
+        "development_stage": [
+          "22-year-old human stage",
+          "63-year-old human stage",
+          "52-year-old human stage",
+          "45-year-old human stage",
+          "46-year-old human stage",
+          "79-year-old human stage",
+          "50-year-old human stage",
+          "51-year-old human stage",
+          "18-year-old human stage",
+          "26-year-old human stage",
+          "24-year-old human stage",
+          "33-year-old human stage",
+          "2-year-old human stage",
+          "7-year-old human stage",
+          "1-month-old human stage",
+          "14-year-old human stage",
+          "12-month-old human stage",
+          "5-year-old human stage",
+          "3-month-old human stage",
+          "4-year-old human stage",
+          "11-month-old human stage",
+          "16-year-old human stage",
+          "12-year-old human stage",
+          "6-month-old human stage",
+          "9-year-old human stage",
+          "73-year-old human stage",
+          "77-year-old human stage",
+          "60-year-old human stage",
+          "20-year-old human stage"
+        ]
+      },
+      "**Sex Index** (Sex-related annotations)": {
+        "sex": [
+          "male",
+          "female",
+          "unknown"
+        ]
+      },
+      "**Study Index** (Study names associated with dataset)": {
+        "study": [
+          "Lafyatis_Rojas_2019",
+          "Meyer_2021",
+          "Schultze_unpubl",
+          "Duong_lungMAP_unpubl",
+          "Seibold_2020",
+          "Lafyatis_2019",
+          "Teichmann_Meyer_2019",
+          "Sun_2020",
+          "Lambrechts_2021",
+          "Schiller_2021",
+          "Budinger_2020",
+          "Wunderink_2021",
+          "Banovich_Kropski_2020",
+          "Gomperts_2021",
+          "Zhang_2021",
+          "Regev_2021",
+          "Misharin_Budinger_2018",
+          "Janssen_2020",
+          "Kaminski_2020",
+          "Misharin_2021",
+          "Jain_Misharin_2021",
+          "Thienpont_2018",
+          "Eils_2020",
+          "Sims_2019",
+          "Krasnow_2020",
+          "Nawijn_2021",
+          "Xu_2020",
+          "Barbry_Leroy_2020",
+          "Meyer_Nikolic_2022",
+          "Meyer_2019",
+          "Peer_Massague_2020",
+          "Schiller_2020",
+          "Sheppard_2020",
+          "Shalek_2018",
+          "Tata_unpubl"
+        ]
+      },
+      "**Suspension Index** (Suspension type annotations)": {
+        "suspension_type": [
+          "cell",
+          "nucleus"
+        ]
+      },
+      "**Assay Index** (Assay methods used)": {
+        "assay": [
+          "10x 3' v1",
+          "10x 3' v2",
+          "Seq-Well",
+          "10x 3' v3",
+          "10x 5' v1",
+          "10x 5' transcription profiling",
+          "10x 5' v2",
+          "10x 3' transcription profiling",
+          "Drop-seq"
+        ]
+      },
+      "**Tissue Index** (Tissue types represented)": {
+        "tissue": [
+          "lung parenchyma",
+          "lung",
+          "respiratory airway",
+          "nose"
+        ]
+      },
+      "**Ethnicity Index** (Self-reported ethnicity)": {
+        "self_reported_ethnicity": [
+          "European",
+          "Asian",
+          "unknown",
+          "African",
+          "American",
+          "admixed ancestry",
+          "Pacific Islander"
+        ]
+      },
+      "**Sampling Index** (Sampling methods)": {
+        "tissue_sampling_method": [
+          "donor_lung",
+          "surgical_resection",
+          "lung_explant",
+          "donor_lung_cryopreserved",
+          "balf",
+          "autopsy",
+          "balf_cryopreserved",
+          "autopsy_cryopreserved",
+          "biopsy_cryopreserved",
+          "scraping",
+          "biopsy",
+          "brush"
+        ]
+      }
+    },
+    "**Dataset-Specific Fields**": {
+      "**Disease Stats**": "disease",
+      "**Restrict Index**": [
+        "study",
+        "assay",
+        "suspension_type",
+        "tissue"
+      ],
+      "**Display Index**": [
+        "disease",
+        "study",
+        "assay",
+        "suspension_type"
+      ]
+    },
+    "**Lineage Levels**": {
+      "level_1": "ann_level_1",
+      "level_2": "ann_level_2",
+      "level_3": "ann_level_3",
+      "level_4": "ann_finest_level"
+    },
+    "**Differential Expression** (Disease-Study-CellType mappings)": [
+      {
+        "disease": "chronic obstructive pulmonary disease",
+        "study": "Kaminski_2020",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT1",
+          "AT2",
+          "B cells",
+          "CD4 T cells",
+          "CD8 T cells",
+          "Classical monocytes",
+          "DC2",
+          "EC general capillary",
+          "Lymphatic EC mature",
+          "Mast cells",
+          "Multiciliated (non-nasal)",
+          "NK cells",
+          "Non-classical monocytes"
+        ]
+      },
+      {
+        "disease": "chronic rhinitis",
+        "study": "Shalek_2018",
+        "cell_types": [
+          "Goblet (nasal)"
+        ]
+      },
+      {
+        "disease": "COVID-19",
+        "study": "Zhang_2021",
+        "cell_types": [
+          "Alveolar macrophages"
+        ]
+      },
+      {
+        "disease": "cystic fibrosis",
+        "study": "Gomperts_2021",
+        "cell_types": [
+          "Basal resting",
+          "Multiciliated (non-nasal)",
+          "Suprabasal"
+        ]
+      },
+      {
+        "disease": "hypersensitivity pneumonitis",
+        "study": "Banovich_Kropski_2020",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT2",
+          "Monocyte-derived Mph"
+        ]
+      },
+      {
+        "disease": "hypersensitivity pneumonitis",
+        "study": "Misharin_Budinger_2018",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT2"
+        ]
+      },
+      {
+        "disease": "interstitial lung disease",
+        "study": "Banovich_Kropski_2020",
+        "cell_types": [
+          "AT2",
+          "Classical monocytes"
+        ]
+      },
+      {
+        "disease": "interstitial lung disease",
+        "study": "Misharin_Budinger_2018",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT2",
+          "Monocyte-derived Mph",
+          "Multiciliated (non-nasal)"
+        ]
+      },
+      {
+        "disease": "interstitial lung disease",
+        "study": "Sheppard_2020",
+        "cell_types": [
+          "Monocyte-derived Mph",
+          "Pericytes",
+          "Smooth muscle"
+        ]
+      },
+      {
+        "disease": "lung adenocarcinoma",
+        "study": "Peer_Massague_2020",
+        "cell_types": [
+          "Alveolar macrophages",
+          "CD4 T cells",
+          "CD8 T cells"
+        ]
+      },
+      {
+        "disease": "non-specific interstitial pneumonia",
+        "study": "Banovich_Kropski_2020",
+        "cell_types": [
+          "Alveolar macrophages",
+          "CD4 T cells"
+        ]
+      },
+      {
+        "disease": "pulmonary fibrosis",
+        "study": "Banovich_Kropski_2020",
+        "cell_types": [
+          "Adventitial fibroblasts",
+          "Alveolar macrophages",
+          "AT2",
+          "CD4 T cells",
+          "CD8 T cells",
+          "Classical monocytes",
+          "DC2",
+          "EC arterial",
+          "EC general capillary",
+          "Lymphatic EC mature",
+          "Monocyte-derived Mph",
+          "Multiciliated (non-nasal)",
+          "Non-classical monocytes",
+          "pre-TB secretory"
+        ]
+      },
+      {
+        "disease": "pulmonary fibrosis",
+        "study": "Kaminski_2020",
+        "cell_types": [
+          "Adventitial fibroblasts",
+          "Alveolar macrophages",
+          "Alveolar Mph proliferating",
+          "AT1",
+          "AT2",
+          "B cells",
+          "CD4 T cells",
+          "CD8 T cells",
+          "Classical monocytes",
+          "DC2",
+          "Lymphatic EC mature",
+          "Mast cells",
+          "Monocyte-derived Mph",
+          "Multiciliated (non-nasal)",
+          "NK cells",
+          "Non-classical monocytes"
+        ]
+      },
+      {
+        "disease": "pulmonary fibrosis",
+        "study": "Misharin_Budinger_2018",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT2",
+          "Monocyte-derived Mph"
+        ]
+      },
+      {
+        "disease": "pulmonary fibrosis",
+        "study": "Schiller_2020",
+        "cell_types": [
+          "AT2",
+          "CD8 T cells",
+          "Classical monocytes",
+          "Mast cells"
+        ]
+      },
+      {
+        "disease": "pulmonary fibrosis",
+        "study": "Sheppard_2020",
+        "cell_types": [
+          "Adventitial fibroblasts",
+          "Alveolar fibroblasts",
+          "Pericytes",
+          "Smooth muscle"
+        ]
+      },
+      {
+        "disease": "pulmonary sarcoidosis",
+        "study": "Banovich_Kropski_2020",
+        "cell_types": [
+          "Alveolar macrophages",
+          "AT2"
+        ]
+      }
+    ],
+    "**Directory Path** (File location of the dataset)": "/data/aronow/pankaj/FigChat/datasets/HLCA_full_superadata_v3_norm_log_deg",
+    "**AnnData Structure**": {
+      "shape": [
+        50520,
+        56295
+      ],
+      "X_dtype": "float32",
+      "obs_fields": [
+        "orig.ident",
+        "Metacell",
+        "suspension_type",
+        "donor_id",
+        "assay_ontology_term_id",
+        "cell_type_ontology_term_id",
+        "development_stage_ontology_term_id",
+        "disease_ontology_term_id",
+        "self_reported_ethnicity_ontology_term_id",
+        "tissue_ontology_term_id",
+        "organism_ontology_term_id",
+        "sex_ontology_term_id",
+        "3'_or_5'",
+        "age_range",
+        "ann_finest_level",
+        "ann_level_1",
+        "ann_level_2",
+        "ann_level_3",
+        "ann_level_4",
+        "ann_level_5",
+        "core_or_extension",
+        "dataset",
+        "fresh_or_frozen",
+        "lung_condition",
+        "original_ann_level_1",
+        "original_ann_level_2",
+        "original_ann_level_3",
+        "original_ann_level_4",
+        "original_ann_level_5",
+        "original_ann_nonharmonized",
+        "reannotation_type",
+        "sample",
+        "scanvi_label",
+        "sequencing_platform",
+        "study",
+        "tissue_sampling_method",
+        "cell_type",
+        "assay",
+        "disease",
+        "organism",
+        "sex",
+        "tissue",
+        "self_reported_ethnicity",
+        "development_stage",
+        "ann",
+        "ann_sample",
+        "size",
+        "is_primary_data",
+        "datasets",
+        "transf_ann_level_1_label",
+        "transf_ann_level_2_label",
+        "transf_ann_level_3_label",
+        "transf_ann_level_4_label",
+        "transf_ann_level_5_label",
+        "Metacell_ID"
+      ],
+      "var_fields": [],
+      "obsm_keys": [
+        "X_umap"
+      ],
+      "uns_keys": [
+        "disease_comparison_summary",
+        "disease_stats",
+        "interaction_data",
+        "log1p",
+        "marker_stats",
+        "rank_genes_groups"
+      ],
+      "layers_keys": []
+    }
+  },
+  "notes": {
+    "**Notes** (Explanation of fields and structure)": [
+      "1. **Dataset Metadata**: General information about the dataset, including its name, description, species, research team, publication link, and data source.",
+      "2. **Indexes and Annotations**: Metadata fields that organize and describe aspects of the dataset such as cell types, covariates, age, sex, studies, assays, tissues, and sampling methods.",
+      "3. **Dataset-Specific Fields**: Includes disease statistics, restrict index for filtering, and display index for visualization preferences.",
+      "4. **Lineage Levels**: Defines the lineage annotation levels specific to each dataset.",
+      "5. **Differential Expression**: Information linking diseases, associated studies, and cell types involved in differential expression analysis.",
+      "6. **Directory Path**: The file location where the dataset is stored.",
+      "7. **AnnData Structure**: Structure of the AnnData object for the dataset."
+    ]
+  }
+}

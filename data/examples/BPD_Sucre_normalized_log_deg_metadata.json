@@ -1,0 +1,249 @@
+{
+  "dataset": {
+    "**Dataset Metadata**": {
+      "**Dataset Name**": "BPD_Sucre_normalized_log_deg.h5ad",
+      "**Description**": "Lung injury in preterm infants leads to structural and functional respiratory deficits, with a risk for bronchopulmonary dysplasia (BPD) that in its most severe form is accompanied by pulmonary hypertension (PH). This study examines cellular and molecular dynamics in neonatal BPD using samples from the NICU, including preterm infants with early lung injury and distinguishing between BPD and BPD+PH phenotypes. Samples were collected from autopsy and surgical biopsy. Analysis of the endothelium revealed a unique aberrant capillary cell-state primarily in BPD+PH marked by ANKRD1 expression. Predictive signaling analysis identified deficits in the semaphorin guidance-cue signaling pathway and decreased expression of pro-angiogenic transcription factor FOXF1 within the alveolar parenchyma in neonatal lung samples with BPD/BPD+PH.",
+      "**Species**": "Homo sapiens",
+      "**Research Team**": "LungMAP (Sucre lab)",
+      "**Publication**": "https://www.biorxiv.org/content/10.1101/2024.08.27.609955v2",
+      "**Source**": "https://lungcells.app.vumc.org"
+    },
+    "**Indexes and Annotations**": {
+      "**Donor Index** (Unique donor identifier)": "donor_id",
+      "**Cell Type Index** (Cell types in dataset)": {
+        "celltype": [
+          "Secretory -3A1",
+          "-3A2",
+          "RASC",
+          "AT2",
+          "AT1",
+          "Multiciliated",
+          "Basal",
+          "Secretory MUC5B",
+          "Pulmonary venous EC",
+          "abCap",
+          "gCap",
+          "Arterial EC",
+          "aCap",
+          "Systemic venous EC",
+          "Lymphatic",
+          "Ductal MyoFB",
+          "Alveolar FB",
+          "Adventitial FB",
+          "Pericyte",
+          "Activated FB",
+          "VSMC",
+          "Alveolar MyoFB",
+          "Alveolar Macrophage",
+          "cDC",
+          "NKT Cell",
+          "Monocyte",
+          "Mast cell",
+          "NK Cell",
+          "T Cell",
+          "pDC",
+          "B Cell",
+          "Basophil",
+          "Neutrophil",
+          "Plasma cell"
+        ]
+      },
+      "**Covariate Index** (Covariates and annotations, e.g., diseases)": {
+        "condition": [
+          "Term infant",
+          "Acute preterm injury",
+          "BPD+PH",
+          "BPD"
+        ]
+      },
+      "**Age Index** (Age-related annotations)": {
+        "age": [
+          "0d",
+          "20d",
+          "26wk",
+          "7m"
+        ]
+      },
+      "**Sex Index** (Sex-related annotations)": {
+        "sex": [
+          "unknown"
+        ]
+      },
+      "**Study Index** (Study names associated with dataset)": {},
+      "**Suspension Index** (Suspension type annotations)": {},
+      "**Assay Index** (Assay methods used)": {},
+      "**Tissue Index** (Tissue types represented)": {
+        "tissue": [
+          "lung"
+        ]
+      },
+      "**Ethnicity Index** (Self-reported ethnicity)": {},
+      "**Sampling Index** (Sampling methods)": {}
+    },
+    "**Dataset-Specific Fields**": {
+      "**Disease Stats**": "condition",
+      "**Restrict Index**": [
+        "broad_condition"
+      ],
+      "**Display Index**": [
+        "condition"
+      ]
+    },
+    "**Lineage Levels**": {
+      "level_1": "celltype_lineage",
+      "level_2": "celltype"
+    },
+    "**Differential Expression** (Disease-Study-CellType mappings)": [
+      {
+        "disease": "Acute preterm injury",
+        "study": "lung",
+        "cell_types": [
+          "abCap",
+          "aCap",
+          "Adventitial FB",
+          "Alveolar FB",
+          "Arterial EC",
+          "AT1",
+          "cDC",
+          "gCap",
+          "Lymphatic",
+          "Monocyte",
+          "Multiciliated",
+          "NK Cell",
+          "Pericyte",
+          "Pulmonary venous EC",
+          "T Cell",
+          "VSMC"
+        ]
+      },
+      {
+        "disease": "BPD",
+        "study": "lung",
+        "cell_types": [
+          "aCap",
+          "Adventitial FB",
+          "Alveolar FB",
+          "Alveolar Macrophage",
+          "Alveolar MyoFB",
+          "Arterial EC",
+          "AT1",
+          "AT2",
+          "B Cell",
+          "Basophil",
+          "cDC",
+          "Ductal MyoFB",
+          "gCap",
+          "Lymphatic",
+          "Monocyte",
+          "Multiciliated",
+          "Neutrophil",
+          "NK Cell",
+          "NKT Cell",
+          "pDC",
+          "Pericyte",
+          "Plasma cell",
+          "Pulmonary venous EC",
+          "RASC",
+          "Secretory -3A1, -3A2",
+          "T Cell",
+          "VSMC"
+        ]
+      },
+      {
+        "disease": "BPD+PH",
+        "study": "lung",
+        "cell_types": [
+          "abCap",
+          "aCap",
+          "Activated FB",
+          "Adventitial FB",
+          "Alveolar FB",
+          "Arterial EC",
+          "AT1",
+          "AT2",
+          "B Cell",
+          "cDC",
+          "Ductal MyoFB",
+          "gCap",
+          "Lymphatic",
+          "Mast cell",
+          "Monocyte",
+          "Multiciliated",
+          "NK Cell",
+          "NKT Cell",
+          "Pericyte",
+          "Pulmonary venous EC",
+          "RASC",
+          "Systemic venous EC",
+          "T Cell",
+          "VSMC"
+        ]
+      }
+    ],
+    "**Directory Path** (File location of the dataset)": "/data/aronow/pankaj/FigChat/datasets/BPD_Sucre_normalized_log_deg",
+    "**AnnData Structure**": {
+      "shape": [
+        43607,
+        36601
+      ],
+      "X_dtype": "float64",
+      "obs_fields": [
+        "orig.ident",
+        "nCount_RNA",
+        "nFeature_RNA",
+        "percent.mt",
+        "dataset",
+        "age",
+        "condition",
+        "broad_condition",
+        "percent.rb",
+        "nCount_SCT",
+        "nFeature_SCT",
+        "louvain",
+        "celltype",
+        "sub.cluster",
+        "SCT_snn_res.1.4",
+        "celltype_lineage",
+        "donor_id",
+        "tissue",
+        "sex"
+      ],
+      "var_fields": [
+        "features"
+      ],
+      "obsm_keys": [
+        "X_umap"
+      ],
+      "uns_keys": [
+        "disease_comparison_summary",
+        "disease_stats",
+        "interaction_data",
+        "log1p",
+        "marker_stats",
+        "rank_genes_groups"
+      ],
+      "layers_keys": [],
+      "raw": {
+        "exists": true,
+        "shape": [
+          43607,
+          36601
+        ],
+        "var_fields": [
+          "features"
+        ]
+      }
+    }
+  },
+  "notes": {
+    "**Notes** (Explanation of fields and structure)": [
+      "1. **Dataset Metadata**: General information about the dataset, including its name, description, species, research team, publication link, and data source.",
+      "2. **Indexes and Annotations**: Metadata fields that organize and describe aspects of the dataset such as cell types, covariates, age, sex, studies, assays, tissues, and sampling methods.",
+      "3. **Dataset-Specific Fields**: Includes disease statistics, restrict index for filtering, and display index for visualization preferences.",
+      "4. **Lineage Levels**: Defines the lineage annotation levels specific to each dataset.",
+      "5. **Differential Expression**: Information linking diseases, associated studies, and cell types involved in differential expression analysis.",
+      "6. **Directory Path**: The file location where the dataset is stored.",
+      "7. **AnnData Structure**: Structure of the AnnData object for the dataset."
+    ]
+  }
+}

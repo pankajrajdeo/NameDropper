@@ -1,0 +1,490 @@
+{
+  "dataset": {
+    "**Dataset Metadata**": {
+      "**Dataset Name**": "HCA_fetal_lung_normalized_log_deg.h5ad",
+      "**Description**": "Multiomic cell atlas of human lung development of high-throughput spatial transcriptomics (10x 5' v1) from 5Ð22 post-conception weeks. e identify previously uncharacterized cell states in all compartments. These include developmental-specific secretory progenitors and a subtype of neuroendocrine cell related to human small cell lung cancer. These datasets are available through another  web interface (https://lungcellatlas.org).",
+      "**Species**": "Homo sapiens",
+      "**Research Team**": "Wellcome HCA Strategic Science Support",
+      "**Publication**": "https://linkinghub.elsevier.com/retrieve/pii/S0092867422014155",
+      "**Source**": "https://cellxgene.cziscience.com/collections/2d2e2acd-dade-489f-a2da-6c11aa654028"
+    },
+    "**Indexes and Annotations**": {
+      "**Donor Index** (Unique donor identifier)": "donor_id",
+      "**Cell Type Index** (Cell types in dataset)": {
+        "cell_type": [
+          "pulmonary interstitial fibroblast",
+          "fibroblast of lung",
+          "pericyte",
+          "vascular associated smooth muscle cell",
+          "myofibroblast cell",
+          "bronchus fibroblast of lung",
+          "mesothelial cell",
+          "tracheobronchial smooth muscle cell",
+          "smooth muscle cell",
+          "chondrocyte",
+          "mesenchymal cell",
+          "epithelial cell of lung",
+          "club cell",
+          "respiratory epithelial cell",
+          "squamous epithelial cell",
+          "pulmonary alveolar type 1 cell",
+          "pulmonary alveolar type 2 cell",
+          "lung secretory cell",
+          "lung neuroendocrine cell",
+          "basal cell",
+          "macrophage",
+          "dendritic cell",
+          "classical monocyte",
+          "non-classical monocyte",
+          "promonocyte",
+          "hematopoietic stem cell",
+          "dendritic cell",
+          "human",
+          "neutrophil",
+          "megakaryocyte",
+          "promyelocyte",
+          "plasmacytoid dendritic cell",
+          "eosinophil",
+          "basophil",
+          "megakaryocyte-erythroid progenitor cell",
+          "platelet",
+          "early lymphoid progenitor",
+          "granulocyte monocyte progenitor cell",
+          "bone marrow cell",
+          "common myeloid progenitor",
+          "erythrocyte",
+          "capillary endothelial cell",
+          "endothelial cell of lymphatic vessel",
+          "vein endothelial cell",
+          "endothelial cell of artery",
+          "reticulocyte",
+          "erythroblast",
+          "endothelial cell",
+          "primitive red blood cell",
+          "CD4-positive",
+          "alpha-beta T cell",
+          "CD16-positive",
+          "CD56-dim natural killer cell",
+          "human",
+          "CD16-negative",
+          "CD56-bright natural killer cell",
+          "human",
+          "natural killer cell",
+          "T-helper 17 cell",
+          "regulatory T cell",
+          "CD8-positive",
+          "alpha-beta T cell",
+          "T cell",
+          "mature NK T cell",
+          "group 3 innate lymphoid cell",
+          "group 2 innate lymphoid cell",
+          "CD34-positive",
+          "CD56-positive",
+          "CD117-positive common innate lymphoid precursor",
+          "human",
+          "thymocyte",
+          "small pre-B-II cell",
+          "large pre-B-II cell",
+          "B-1b B cell",
+          "immature B cell",
+          "pro-B cell",
+          "pre-B-I cell",
+          "late pro-B cell",
+          "precursor B cell",
+          "B-1a B cell",
+          "lung ciliated cell",
+          "Schwann cell",
+          "immature Schwann cell",
+          "neuron",
+          "Schwann cell precursor",
+          "neural progenitor cell",
+          "mast cell"
+        ]
+      },
+      "**Covariate Index** (Covariates and annotations, e.g., diseases)": {
+        "development_stage": [
+          "18th week post-fertilization stage",
+          "22nd week post-fertilization stage",
+          "15th week post-fertilization stage",
+          "20th week post-fertilization stage",
+          "Carnegie stage 19",
+          "Carnegie stage 16",
+          "9th week post-fertilization stage",
+          "11th week post-fertilization stage"
+        ]
+      },
+      "**Age Index** (Age-related annotations)": {
+        "development_stage": [
+          "18th week post-fertilization stage",
+          "22nd week post-fertilization stage",
+          "15th week post-fertilization stage",
+          "20th week post-fertilization stage",
+          "Carnegie stage 19",
+          "Carnegie stage 16",
+          "9th week post-fertilization stage",
+          "11th week post-fertilization stage"
+        ]
+      },
+      "**Sex Index** (Sex-related annotations)": {
+        "sex": [
+          "male",
+          "female"
+        ]
+      },
+      "**Study Index** (Study names associated with dataset)": {},
+      "**Suspension Index** (Suspension type annotations)": {
+        "suspension_type": [
+          "cell"
+        ]
+      },
+      "**Assay Index** (Assay methods used)": {
+        "assay": [
+          "10x 5' v1"
+        ]
+      },
+      "**Tissue Index** (Tissue types represented)": {
+        "dissection:Proximal, Distal, Whole-lung": []
+      },
+      "**Ethnicity Index** (Self-reported ethnicity)": {
+        "self_reported_ethnicity": [
+          "unknown"
+        ]
+      },
+      "**Sampling Index** (Sampling methods)": {
+        "chemistry": [
+          "Normal",
+          "Trypsin+",
+          "Trypsin+CD326"
+        ]
+      }
+    },
+    "**Dataset-Specific Fields**": {
+      "**Disease Stats**": "development_stage",
+      "**Restrict Index**": [
+        "batch",
+        "chemistry"
+      ],
+      "**Display Index**": [
+        "development_stage",
+        "batch"
+      ]
+    },
+    "**Lineage Levels**": {
+      "level_1": "broad_celltype",
+      "level_2": "cell_type"
+    },
+    "**Differential Expression** (Disease-Study-CellType mappings)": [
+      {
+        "disease": "11th week post-fertilization stage",
+        "study": "lung",
+        "cell_types": [
+          "capillary endothelial cell",
+          "classical monocyte",
+          "dendritic cell",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythroblast",
+          "erythrocyte",
+          "fibroblast of lung",
+          "macrophage",
+          "mesothelial cell",
+          "myofibroblast cell",
+          "natural killer cell",
+          "pericyte",
+          "pulmonary interstitial fibroblast",
+          "respiratory epithelial cell",
+          "reticulocyte",
+          "Schwann cell",
+          "tracheobronchial smooth muscle cell",
+          "vascular associated smooth muscle cell"
+        ]
+      },
+      {
+        "disease": "15th week post-fertilization stage",
+        "study": "lung",
+        "cell_types": [
+          "B-1a B cell",
+          "B-1b B cell",
+          "bronchus fibroblast of lung",
+          "capillary endothelial cell",
+          "CD16-negative, CD56-bright natural killer cell, human",
+          "CD16-positive, CD56-dim natural killer cell, human",
+          "CD4-positive, alpha-beta T cell",
+          "CD8-positive, alpha-beta T cell",
+          "classical monocyte",
+          "club cell",
+          "dendritic cell",
+          "dendritic cell, human",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythrocyte",
+          "fibroblast of lung",
+          "immature B cell",
+          "large pre-B-II cell",
+          "late pro-B cell",
+          "lung ciliated cell",
+          "macrophage",
+          "mature NK T cell",
+          "mesothelial cell",
+          "myofibroblast cell",
+          "natural killer cell",
+          "non-classical monocyte",
+          "pericyte",
+          "pre-B-I cell",
+          "precursor B cell",
+          "pulmonary alveolar type 2 cell",
+          "pulmonary interstitial fibroblast",
+          "regulatory T cell",
+          "respiratory epithelial cell",
+          "reticulocyte",
+          "small pre-B-II cell",
+          "T-helper 17 cell",
+          "tracheobronchial smooth muscle cell",
+          "vascular associated smooth muscle cell",
+          "vein endothelial cell"
+        ]
+      },
+      {
+        "disease": "18th week post-fertilization stage",
+        "study": "lung",
+        "cell_types": [
+          "B-1a B cell",
+          "B-1b B cell",
+          "bronchus fibroblast of lung",
+          "capillary endothelial cell",
+          "CD16-negative, CD56-bright natural killer cell, human",
+          "CD16-positive, CD56-dim natural killer cell, human",
+          "CD4-positive, alpha-beta T cell",
+          "CD8-positive, alpha-beta T cell",
+          "classical monocyte",
+          "club cell",
+          "dendritic cell",
+          "dendritic cell, human",
+          "endothelial cell of artery",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythrocyte",
+          "fibroblast of lung",
+          "group 2 innate lymphoid cell",
+          "immature B cell",
+          "large pre-B-II cell",
+          "late pro-B cell",
+          "lung ciliated cell",
+          "macrophage",
+          "mature NK T cell",
+          "mesothelial cell",
+          "myofibroblast cell",
+          "natural killer cell",
+          "non-classical monocyte",
+          "pericyte",
+          "pre-B-I cell",
+          "precursor B cell",
+          "pulmonary alveolar type 2 cell",
+          "pulmonary interstitial fibroblast",
+          "regulatory T cell",
+          "reticulocyte",
+          "small pre-B-II cell",
+          "tracheobronchial smooth muscle cell",
+          "vascular associated smooth muscle cell",
+          "vein endothelial cell"
+        ]
+      },
+      {
+        "disease": "20th week post-fertilization stage",
+        "study": "lung",
+        "cell_types": [
+          "B-1a B cell",
+          "B-1b B cell",
+          "capillary endothelial cell",
+          "CD16-negative, CD56-bright natural killer cell, human",
+          "CD16-positive, CD56-dim natural killer cell, human",
+          "CD4-positive, alpha-beta T cell",
+          "CD8-positive, alpha-beta T cell",
+          "classical monocyte",
+          "club cell",
+          "dendritic cell",
+          "dendritic cell, human",
+          "endothelial cell of artery",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythrocyte",
+          "fibroblast of lung",
+          "group 2 innate lymphoid cell",
+          "immature B cell",
+          "large pre-B-II cell",
+          "lung ciliated cell",
+          "macrophage",
+          "natural killer cell",
+          "non-classical monocyte",
+          "pericyte",
+          "plasmacytoid dendritic cell",
+          "pre-B-I cell",
+          "precursor B cell",
+          "pulmonary alveolar type 2 cell",
+          "pulmonary interstitial fibroblast",
+          "regulatory T cell",
+          "small pre-B-II cell",
+          "T-helper 17 cell",
+          "vascular associated smooth muscle cell",
+          "vein endothelial cell"
+        ]
+      },
+      {
+        "disease": "9th week post-fertilization stage",
+        "study": "lung",
+        "cell_types": [
+          "capillary endothelial cell",
+          "classical monocyte",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythrocyte",
+          "fibroblast of lung",
+          "macrophage",
+          "mesothelial cell",
+          "myofibroblast cell",
+          "pericyte",
+          "respiratory epithelial cell",
+          "Schwann cell",
+          "tracheobronchial smooth muscle cell",
+          "vascular associated smooth muscle cell"
+        ]
+      },
+      {
+        "disease": "Carnegie stage 16",
+        "study": "lung",
+        "cell_types": [
+          "capillary endothelial cell",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "fibroblast of lung",
+          "macrophage",
+          "mesothelial cell",
+          "respiratory epithelial cell"
+        ]
+      },
+      {
+        "disease": "Carnegie stage 19",
+        "study": "lung",
+        "cell_types": [
+          "capillary endothelial cell",
+          "endothelial cell of lymphatic vessel",
+          "epithelial cell of lung",
+          "erythrocyte",
+          "fibroblast of lung",
+          "mesothelial cell",
+          "respiratory epithelial cell"
+        ]
+      }
+    ],
+    "**Directory Path** (File location of the dataset)": "/data/aronow/pankaj/FigChat/datasets/HCA_fetal_lung_normalized_log_deg",
+    "**AnnData Structure**": {
+      "shape": [
+        71752,
+        26286
+      ],
+      "X_dtype": "float32",
+      "obs_fields": [
+        "batch",
+        "dissection",
+        "chemistry",
+        "percent_mito",
+        "n_counts",
+        "n_genes",
+        "doublet_scores",
+        "bh_pval",
+        "leiden",
+        "phase",
+        "S_score",
+        "G2M_score",
+        "new_celltype",
+        "big_cluster",
+        "broad_celltype",
+        "assay_ontology_term_id",
+        "cell_type_ontology_term_id",
+        "development_stage_ontology_term_id",
+        "disease_ontology_term_id",
+        "self_reported_ethnicity_ontology_term_id",
+        "is_primary_data",
+        "organism_ontology_term_id",
+        "sex_ontology_term_id",
+        "tissue_ontology_term_id",
+        "donor_id",
+        "suspension_type",
+        "tissue_type",
+        "cell_type",
+        "assay",
+        "disease",
+        "organism",
+        "sex",
+        "tissue",
+        "self_reported_ethnicity",
+        "development_stage",
+        "observation_joinid"
+      ],
+      "var_fields": [
+        "n_cells",
+        "gene_symbols",
+        "feature_is_filtered",
+        "feature_name",
+        "feature_reference",
+        "feature_biotype",
+        "feature_length",
+        "feature_type"
+      ],
+      "obsm_keys": [
+        "X_pca",
+        "X_umap",
+        "X_umap_original"
+      ],
+      "uns_keys": [
+        "batch_colors",
+        "big_cluster_colors",
+        "broadcelltype_colors",
+        "chemistry_colors",
+        "citation",
+        "default_embedding",
+        "disease_comparison_summary",
+        "disease_stats",
+        "interaction_data",
+        "log1p",
+        "marker_stats",
+        "newcelltype_colors",
+        "phase_colors",
+        "rank_genes_groups",
+        "rank_genes_groups_global",
+        "schema_reference",
+        "schema_version",
+        "title"
+      ],
+      "layers_keys": [],
+      "raw": {
+        "exists": true,
+        "shape": [
+          71752,
+          26286
+        ],
+        "var_fields": [
+          "n_cells",
+          "gene_symbols",
+          "feature_is_filtered",
+          "feature_name",
+          "feature_reference",
+          "feature_biotype",
+          "feature_length",
+          "feature_type"
+        ]
+      }
+    }
+  },
+  "notes": {
+    "**Notes** (Explanation of fields and structure)": [
+      "1. **Dataset Metadata**: General information about the dataset, including its name, description, species, research team, publication link, and data source.",
+      "2. **Indexes and Annotations**: Metadata fields that organize and describe aspects of the dataset such as cell types, covariates, age, sex, studies, assays, tissues, and sampling methods.",
+      "3. **Dataset-Specific Fields**: Includes disease statistics, restrict index for filtering, and display index for visualization preferences.",
+      "4. **Lineage Levels**: Defines the lineage annotation levels specific to each dataset.",
+      "5. **Differential Expression**: Information linking diseases, associated studies, and cell types involved in differential expression analysis.",
+      "6. **Directory Path**: The file location where the dataset is stored.",
+      "7. **AnnData Structure**: Structure of the AnnData object for the dataset."
+    ]
+  }
+}

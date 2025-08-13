@@ -1,0 +1,70 @@
+# Production Metadata Harmonization Configuration
+# This file demonstrates all the enhanced CLI features
+
+# Search Strategy Configuration
+strategies:
+  exact:
+    enabled: true
+    top_k: 5
+    threshold: 1.0
+    priority: 1
+  
+  fuzzy:
+    enabled: true
+    top_k: 10
+    threshold: 0.85
+    priority: 2
+  
+  semantic:
+    enabled: true
+    top_k: 15
+    threshold: 0.7
+    priority: 3
+  
+  fulltext:
+    enabled: false
+    top_k: 5
+    threshold: 0.6
+    priority: 4
+
+# Term Expansion Configuration
+term_expansion:
+  enabled: true
+  expansion_count: 5
+
+# Dataset Context
+dataset_description: "Lung injury in preterm infants leads to structural and functional respiratory deficits, with a risk for bronchopulmonary dysplasia (BPD) that in its most severe form is accompanied by pulmonary hypertension (PH). This study examines cellular and molecular dynamics in neonatal BPD using samples from the NICU, including preterm infants with early lung injury and distinguishing between BPD and BPD+PH phenotypes."
+
+# Ontology Filtering
+ontology_filter: "CL,MONDO,UBERON,PATO,EFO,HPO,ORDO"
+
+# Field-Specific Ontology Targeting
+field_mappings:
+  cell_type: "CL,UBERON"
+  disease: "MONDO,HPO,ORDO"
+  tissue: "UBERON,FMA"
+  chemical: "CHEBI"
+  age: "PATO"
+  sex: "PATO"
+
+# Output Configuration
+output:
+  format: "json"
+  include_original: true
+  include_reasoning: true
+  include_confidence_scores: true
+  include_alternative_matches: true
+
+# Performance Configuration
+performance:
+  batch_size: 100
+  max_workers: 4
+  timeout: 300
+  retry_attempts: 3
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "harmonization.log"
+  include_timestamps: true
+  include_performance_metrics: true
